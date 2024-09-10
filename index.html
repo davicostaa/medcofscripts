@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medcof Scripts</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+     <div>
+        <header>
+            <img src="src/logo.png" alt="Logo" class="logo" id="logo">
+        </header>
+     </div>
+    <!-- Avisos -->
+    <div class="avisospage">
+        <h2>Avisos</h2>
+        <p>O MedCof Scripts automatiza demandas e otimiza processos para facilitar o dia a dia dos colaboradores. Com scripts personalizados, proporcionamos eficiência e mais tempo para focar em inovação e resultados<p>
+    </div>
+    <div class="avisosfrequentes">
+        <h2>Avisos</h2>
+        <p>Frequentes</p>
+    </div>
+    <div class="avisosmsg">
+        <h2>Avisos</h2>
+        <p>Para personalizar as mensagens, utilize o nome da coluna entre chaves {}. Se a coluna é denominada "nome", a mensagem deve ser formatada como "Olá {nome}", por exemplo.</p>
+    </div>
+
+    <div class="seção">
+        <h1>Scripts</h1>
+        <div class="button-container">
+            <button id="btnpage">Página Inicial</button>
+        </div>
+
+        <div class="button-container">
+            <button id="btnFrequentes">Mensagens Frequentes</button>
+        </div>
+
+        <div class="button-container">
+            <button id="btnAutomatedMessages">Mensagens Automatizadas</button>
+        </div>
+    </div>
+    <!-- Campo de Mensagens Personalizadas, inicialmente oculto -->
+    <div class="page">
+        <h1>Bem-vindo ao MedCof Scripts</h1>
+        <form id="frequenteForm" enctype="multipart/form-data">
+        </form>
+    </div>
+
+    <div class="frequente">
+        <h1>Mensagens Frequentes</h1>
+        <form id="frequenteForm" enctype="multipart/form-data">
+        </form>
+    </div>
+
+    <div class="container">
+        <h1>Mensagens Automatizadas</h1>
+        <form id="messageForm" enctype="multipart/form-data">
+            <label for="textoBase">Texto Base:</label>
+            <textarea id="textoBase" name="textoBase" rows="6" placeholder="Digite o texto base aqui..."></textarea>           
+            <label for="fileInput">Carregar arquivo .xlsx</label>
+            <input type="file" id="fileInput" accept=".xlsx, .xls">            
+            <div class="button-group">
+                <button type="button" id="selectAllButton" class="action-button">✔ Selecionar Todos</button>
+                <button type="button" id="deselectAllButton" class="action-button">✔ Selecionar Nenhum</button>
+            </div>
+        </form>
+
+        <div id="tableContainer"></div>
+        <button id="generateMessagesButton" type="button" onclick="generateMessages()">Gerar Mensagens</button>
+        <div id="output"></div>    
+    </div>
+    <!-- Formulário de Login -->
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Nome e sobrenome</label>
+            <input type="text" id="username" name="username" placeholder="Digite seu nome de usuário" required>
+            
+            <label for="email">E-mail</label>
+            <input type="text" id="email" name="email" placeholder="Digite seu e-mail" required>
+            
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+            
+            <label for="sector">Setor</label>
+            <select id="sector" name="sector" required>
+                <option value="" disabled selected>Selecione um setor</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Processos e Acompanhamentos">Processos e Acompanhamentos</option>
+                <option value="Novos Negócios">Novos Negócios</option>
+                <option value="Recursos Humanos">Recursos Humanos</option>
+                <option value="Suporte">Suporte</option>
+                <option value="Vendas">Vendas</option>
+                <option value="Outros">Outros</option>
+            </select>  
+
+            <label for="otherSector" class="hidden" id="otherSectorLabel">Específico:</label>
+            <input type="text" id="otherSector" name="otherSector" placeholder="Digite o setor..." class="hidden">          
+            <button class="login-button">Entrar</button>
+            <button class="cadastro">Não tem uma conta? Cadastre-se</button>
+        </div>
+    <!-- Robô Flutuante -->
+    <div class="floating-robot">
+        <img src="src/cofbot.gif" alt="Robô Flutuante">
+    </div>
+</body>
+</html>
