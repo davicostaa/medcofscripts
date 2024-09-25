@@ -167,6 +167,32 @@ header {
     height: 750px;
 }
 
+.cancel {
+    font-family: 'Montserrat', sans-serif;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px #580303;
+    width: 1000px;
+    border-top: 6px solid #990033;
+    border-bottom: 6px solid #990033;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    position: relative;
+    height: 750px;
+    left: 150px;
+}
+
+.cancel p{
+    font-size: 1.194em;
+}
+
+.cancel div[contenteditable="true"] {
+    text-decoration: none; /* Remove qualquer sublinhado */
+    outline: none; /* Remove o contorno ao clicar */
+}
+
 .frequente button{
     width: 400px;
     display: block; /* Certifica-se de que o botão ocupe toda a linha */
@@ -438,17 +464,17 @@ button:hover {
 }
 
 /* Estilos do robô flutuante */
-.floating-robot {
+.floating {
     position: absolute;
     bottom: 20px;
-    top: 620px;
-    right: 250px;
+    top: 580px;
+    right: 270px;
     width: 260px; /* Ajuste o tamanho conforme necessário */
     height: auto;
     z-index: 10;
 }
 
-.floating-robot img {
+.floating img {
     width: 100%;  
     height: auto;
 }

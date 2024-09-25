@@ -12,8 +12,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const avisosmsg = document.querySelector('.avisosmsg');
     avisosmsg.classList.add('hidden');
 
+    const cancel = document.querySelector('.cancel');
+    cancel.classList.add('hidden');
+
     const container = document.querySelector('.container');
     container.classList.add('hidden');
+
+    const floating = document.querySelector('.floating');
+    floating.classList.remove('hidden');
 
     const frequente = document.querySelector('.frequente');
     frequente.classList.add('hidden');
@@ -63,7 +69,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         avisospage.classList.remove('hidden');
                         avisosfrequentes.classList.add('hidden');
                         avisosmsg.classList.add('hidden');
+                        cancel.classList.add('hidden');
                         container.classList.add('hidden');
+                        floating.classList.remove('hidden')
                         frequente.classList.add('hidden');
                         logo.classList.add('hidden');
                         page.classList.remove('hidden');
@@ -88,10 +96,40 @@ document.addEventListener('DOMContentLoaded', function() {
             avisospage.classList.remove('hidden');
             avisosmsg.classList.add('hidden');
             avisosfrequentes.classList.add('hidden');
+            cancel.classList.add('hidden');
  
             container.classList.add('hidden');
+            floating.classList.remove('hidden')
             frequente.classList.add('hidden');
             page.classList.remove('hidden')
+    });
+
+
+        document.getElementById('btnFrequentes').addEventListener('click', function() {
+            var section = document.getElementById('frequente');
+            avisospage.classList.add('hidden');
+            avisosmsg.classList.add('hidden');
+            avisosfrequentes.classList.remove('hidden');
+            cancel.classList.add('hidden');
+
+            container.classList.add('hidden');
+            floating.classList.remove('hidden')
+            frequente.classList.remove('hidden');
+            page.classList.add('hidden')
+    });
+
+        document.getElementById('btncancel').addEventListener('click', function() {
+            var section = document.getElementById('cancel');
+            avisospage.classList.add('hidden');
+            avisosmsg.classList.add('hidden');
+            avisosfrequentes.classList.add('hidden');
+            cancel.classList.remove('hidden');
+
+            container.classList.add('hidden');
+            floating.classList.remove('hidden')
+            frequente.classList.add('hidden');
+            floating.classList.add('hidden')
+            page.classList.add('hidden')
     });
 
         document.getElementById('btnAutomatedMessages').addEventListener('click', function() {
@@ -99,23 +137,13 @@ document.addEventListener('DOMContentLoaded', function() {
             avisospage.classList.add('hidden');
             avisosfrequentes.classList.add('hidden');
             avisosmsg.classList.remove('hidden');
+            cancel.classList.add('hidden');
 
             container.classList.remove('hidden');
+            floating.classList.remove('hidden')
             frequente.classList.add('hidden');
-            page.classList.add('hidden')
+            page.classList.add('hidden');
     });
-
-        document.getElementById('btnFrequentes').addEventListener('click', function() {
-            var section = document.getElementById('frequente');
-            avisospage.classList.add('hidden');
-            avisosmsg.classList.add('hidden');
-            avisosfrequentes.classList.remove('hidden');
-
-            container.classList.add('hidden');
-            frequente.classList.remove('hidden');
-            page.classList.add('hidden')
-    });
-
 
     // Manipulação de eventos para o carregamento do arquivo
     document.getElementById('fileInput').addEventListener('change', handleFile);
