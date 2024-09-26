@@ -327,17 +327,12 @@ function generateMessages() {
         message.textContent = generateMessageText(rowData);
 
         const additionalTextInput = document.createElement('input');
-        additionalTextInput.type = 'text';
-        additionalTextInput.placeholder = 'Adicionar texto...';
-        additionalTextInput.className = 'additional-text-input';
         additionalTextInput.addEventListener('input', function() {
             updateMessageText(message, rowData, additionalTextInput.value);
         });
 
         const inputContainer = document.createElement('div');
         inputContainer.className = 'input-container';
-        inputContainer.appendChild(additionalTextInput);
-
         messageContainer.appendChild(message);
         messageContainer.appendChild(inputContainer);
 

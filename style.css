@@ -215,6 +215,11 @@ header {
     height: 750px;
 }
 
+.container div[contenteditable="true"] {
+    text-decoration: none; /* Remove qualquer sublinhado */
+    outline: none; /* Remove o contorno ao clicar */
+}
+
 /* Estilos para cabeçalhos */
 h1 {
     text-align: center;
