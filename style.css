@@ -467,8 +467,8 @@ button:hover {
 .floating {
     position: absolute;
     bottom: 20px;
-    top: 580px;
-    right: 270px;
+    top: 620px;
+    right: 250px;
     width: 260px; /* Ajuste o tamanho conforme necessário */
     height: auto;
     z-index: 10;

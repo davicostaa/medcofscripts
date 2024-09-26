@@ -57,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     const sheetName = workbook.SheetNames[0];  // Seleciona a primeira aba
                     const sheet = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName]);  // Converte a aba em JSON
     
-                    console.log("Dados da Planilha:", sheet);  // Verifica os dados lidos da planilha
     
                     // Busca o usuário na planilha com as colunas "Email" e "Senha"
                     const usuarioEncontrado = sheet.find(row => row['Email'] === email && row['Senha'] === password && row['Nome'] === username);
@@ -190,7 +189,6 @@ function handleFile(e) {
         const firstSheetName = workbook.SheetNames[0];
         const worksheet = workbook.Sheets[firstSheetName];
         const json = XLSX.utils.sheet_to_json(worksheet, {header: 1, raw: false});
-        console.log("Planilha carregada:", json);
         loadFont();
         generateTable(json);
     };
@@ -256,8 +254,11 @@ function generateTable(data) {
     const tbody = document.createElement('tbody');
     
     data.slice(1).forEach(row => {
+        // Verifica se a linha está vazia
+        if (row.every(cell => !cell || cell.trim() === '')) return; // Ignora linhas em branco
+    
         const tr = document.createElement('tr');
-        
+    
         // Adiciona a célula de seleção
         const selectButton = document.createElement('div');
         selectButton.className = 'select-button';
@@ -268,14 +269,14 @@ function generateTable(data) {
         const tdSelect = document.createElement('td');
         tdSelect.appendChild(selectButton);
         tr.appendChild(tdSelect);
-
+    
         // Adiciona as células de dados
         row.forEach((value, index) => {
             const td = document.createElement('td');
             td.textContent = formatDate(value);
             tr.appendChild(td);
         });
-        
+    
         tbody.appendChild(tr);
     });
     
