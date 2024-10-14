@@ -12,8 +12,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const avisosmsg = document.querySelector('.avisosmsg');
     avisosmsg.classList.add('hidden');
 
+    const avisosjantares = document.querySelector('.avisosjantares');
+    avisosjantares.classList.add('hidden');
+
+    const jantares = document.querySelector('.jantares');
+    jantares.classList.add('hidden');
+
     const cancel = document.querySelector('.cancel');
     cancel.classList.add('hidden');
+
+    const capacidade = document.querySelector('.capacidade');
+    capacidade.classList.add('hidden');
 
     const container = document.querySelector('.container');
     container.classList.add('hidden');
@@ -68,7 +77,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         avisospage.classList.remove('hidden');
                         avisosfrequentes.classList.add('hidden');
                         avisosmsg.classList.add('hidden');
+                        avisosjantares.classList.add('hidden');
                         cancel.classList.add('hidden');
+
+                        capacidade.classList.add('hidden');
+                        jantares.classList.add('hidden')
                         container.classList.add('hidden');
                         floating.classList.remove('hidden')
                         frequente.classList.add('hidden');
@@ -95,22 +108,27 @@ document.addEventListener('DOMContentLoaded', function() {
             avisospage.classList.remove('hidden');
             avisosmsg.classList.add('hidden');
             avisosfrequentes.classList.add('hidden');
+            avisosjantares.classList.add('hidden');
             cancel.classList.add('hidden');
- 
+
+            capacidade.classList.add('hidden')
+            jantares.classList.add('hidden')
             container.classList.add('hidden');
             floating.classList.remove('hidden')
             frequente.classList.add('hidden');
             page.classList.remove('hidden')
     });
 
-
         document.getElementById('btnFrequentes').addEventListener('click', function() {
             var section = document.getElementById('frequente');
             avisospage.classList.add('hidden');
             avisosmsg.classList.add('hidden');
+            avisosjantares.classList.add('hidden');
             avisosfrequentes.classList.remove('hidden');
             cancel.classList.add('hidden');
-
+        
+            capacidade.classList.add('hidden')
+            jantares.classList.add('hidden')
             container.classList.add('hidden');
             floating.classList.remove('hidden')
             frequente.classList.remove('hidden');
@@ -122,8 +140,11 @@ document.addEventListener('DOMContentLoaded', function() {
             avisospage.classList.add('hidden');
             avisosmsg.classList.add('hidden');
             avisosfrequentes.classList.add('hidden');
+            avisosjantares.classList.add('hidden');
             cancel.classList.remove('hidden');
 
+            capacidade.classList.add('hidden')
+            jantares.classList.add('hidden')
             container.classList.add('hidden');
             floating.classList.remove('hidden')
             frequente.classList.add('hidden');
@@ -136,14 +157,49 @@ document.addEventListener('DOMContentLoaded', function() {
             avisospage.classList.add('hidden');
             avisosfrequentes.classList.add('hidden');
             avisosmsg.classList.remove('hidden');
+            avisosjantares.classList.add('hidden');
             cancel.classList.add('hidden');
 
+            capacidade.classList.add('hidden');
+            jantares.classList.add('hidden')
             container.classList.remove('hidden');
             floating.classList.remove('hidden')
             frequente.classList.add('hidden');
             page.classList.add('hidden');
     });
 
+        document.getElementById('btnJantares').addEventListener('click', function() {
+            var section = document.getElementById('jantares');
+            avisospage.classList.add('hidden');
+            avisosmsg.classList.add('hidden');
+            avisosfrequentes.classList.add('hidden');
+            avisosjantares.classList.remove('hidden');
+            cancel.classList.add('hidden');
+
+            capacidade.classList.add('hidden');  
+            jantares.classList.remove('hidden')
+            container.classList.add('hidden');
+            floating.classList.remove('hidden')
+            frequente.classList.add('hidden');
+            page.classList.add('hidden')
+    });
+
+        document.getElementById('btncapacidade').addEventListener('click', function() {
+            var section = document.getElementById('capacidade');
+            avisospage.classList.add('hidden');
+            avisosmsg.classList.add('hidden');
+            avisosfrequentes.classList.add('hidden');
+            avisosjantares.classList.add('hidden');
+            cancel.classList.add('hidden');
+
+            capacidade.classList.remove('hidden')
+            jantares.classList.add('hidden')
+            container.classList.add('hidden');
+            floating.classList.remove('hidden')
+            frequente.classList.add('hidden');
+            floating.classList.add('hidden')
+            page.classList.add('hidden')
+    });
     // Manipulação de eventos para o carregamento do arquivo
     document.getElementById('fileInput').addEventListener('change', handleFile);
 
