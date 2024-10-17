@@ -1,4 +1,4 @@
-@import './global.css';
+@import '../global/global.css';
 
 /* Estilos dos avisos */
 .avisospage,

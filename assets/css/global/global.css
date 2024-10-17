@@ -1,4 +1,6 @@
-@import './avisos.css';
+@import '../pages/avisos.css';
+@import '../pages/Home/page.css';
+@import './logo.css';
 
 /* Estilos para o corpo da página */
 body {
@@ -22,11 +24,6 @@ header {
     left: 10px;
 }
 
-.logo {
-    width: 350px;
-    height: auto;
-}
-
 .seção {
     font-family: 'Montserrat', sans-serif;
     position: absolute;
@@ -45,20 +42,6 @@ header {
 }
 
 /* Estilos do contêiner principal */
-.page {
-    background-color: transparent;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px #580303;
-    width: 700px;
-    border-top: 6px solid #990033;
-    border-bottom: 6px solid #990033;
-    max-height: 90vh;
-    overflow-y: auto;
-    box-sizing: border-box;
-    position: relative;
-    height: 750px;
-}
 
 .frequente {
     background-color: transparent;
@@ -430,7 +413,7 @@ button:hover {
     bottom: 20px;
     top: 620px;
     right: 250px;
-    width: 260px; /* Ajuste o tamanho conforme necessário */
+    width: 260px;
     height: auto;
     z-index: 10;
 }
