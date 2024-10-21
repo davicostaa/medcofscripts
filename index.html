@@ -20,20 +20,19 @@
         </header>
      </div>
 
-    <div class="flex">
-        <div class="seção">
-            <h1>Scripts</h1>
-            <div class="button-container">
-                <button id="btnpage">Página Inicial</button></div>
+    <div class="seção">
+        <h1>Scripts</h1>
+        <div class="button-container">
+            <button id="btnpage">Página Inicial</button></div>
         
-            <div class="button-container">
-                <button id="btnFrequentes">Mensagens Frequentes</button></div>
+        <div class="button-container">
+            <button id="btnFrequentes">Mensagens Frequentes</button></div>
         
-            <div class="button-container">
+        <div class="button-container">
                 <button id="btnAutomatedMessages">Mensagens Automatizadas</button></div>
 
-            <div class="button-container">
-                <button id="btnJantares">Jantares</button></div>
+        <div class="button-container">
+            <button id="btnJantares">Jantares</button></div>
         </div>
         <!-- Campo de Mensagens Personalizadas, inicialmente oculto -->
         <div class="page">
@@ -63,8 +62,9 @@
             </form>
         
             <div id="tableContainer"></div>
-            <button id="generateMessagesButton" type="button" onclick="generateMessages()">Gerar Mensagens</button>
+            <button id="generateMessagesButton">Gerar Mensagens</button>
             <div contenteditable="true" spellcheck="false"></div>
+            <div id="output"></div>
         </div>
     
         <div class="jantares">
@@ -123,7 +123,7 @@
                     
             <label for="password">Senha</label>
             <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
-                    
+
             <label for="sector">Setor</label>
             <select id="sector" name="sector" required>
                 <option value="" disabled selected>Selecione um setor</option>

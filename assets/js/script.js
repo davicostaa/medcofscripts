@@ -382,13 +382,10 @@ function generateMessages() {
         message.className = 'message';
         message.textContent = generateMessageText(rowData);
 
-        const additionalTextInput = document.createElement('input');
-        additionalTextInput.addEventListener('input', function() {
-            updateMessageText(message, rowData, additionalTextInput.value);
-        });
-
         const inputContainer = document.createElement('div');
         inputContainer.className = 'input-container';
+        inputContainer.appendChild(additionalTextInput);
+
         messageContainer.appendChild(message);
         messageContainer.appendChild(inputContainer);
 
@@ -418,3 +415,4 @@ function deselectAllRows() {
     const selectButtons = document.querySelectorAll('.select-button');
     selectButtons.forEach(button => button.classList.remove('selected'));
 }
+
