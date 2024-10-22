@@ -1,0 +1,32 @@
+@import './frequentes.css';
+
+.avisosfrequentes {
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top: 80px;
+    left: 1330px;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #580303;;
+    height: 320px;
+    width: 350px;
+    border-top: 6px solid #990033;
+    border-bottom: 6px solid #990033;
+    color: #333333;
+    z-index: 10;
+    font-size: 1.3em;
+}
+
+.avisosfrequentes h2 {
+    margin-top: 25px;
+    color: #990033;
+    font-size: 1.5em;
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+.avisosfrequentes p {
+    margin: 10px 0 0;
+    color: #333333;
+    font-size: 1.1em;
+}
