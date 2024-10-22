@@ -54,7 +54,9 @@
                 <label for="textoBase">Texto Base:</label>
                 <textarea id="textoBase" name="textoBase" rows="6" placeholder="Digite o texto base aqui..."></textarea>           
                 <label for="fileInput">Carregar arquivo .xlsx</label>
-                <input type="file" id="fileInput" accept=".xlsx, .xls">            
+                <input type="file" id="fileInput" accept=".xlsx, .xls">  
+                <div id="sheetSelector"></div>
+                <div id="tableContainer"></div>          
                 <div class="button-group">
                     <button type="button" id="selectAllButton" class="action-button">✔ Selecionar Todos</button>
                     <button type="button" id="deselectAllButton" class="action-button">✔ Selecionar Nenhum</button>
@@ -73,7 +75,7 @@
             <div class="btncapacidade">
                 <button id="btncapacidade">Capacidade</button>
             </div>
-        </div>
+        </div>  
     </div>
     
     <div class="cancel">
@@ -165,5 +167,7 @@
     <div class="floating">
         <img src="assets/src/global/cofbot.gif" alt="Robô Flutuante">
     </div>
+
+
 </body>
 </html>
