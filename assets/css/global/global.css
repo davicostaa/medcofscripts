@@ -343,18 +343,3 @@ button:hover {
     border-color: #990033;
     box-shadow: 0 0 10px rgba(153, 0, 51, 0.2);
 }
-
-.floating {
-    position: absolute;
-    bottom: 20px;
-    top: 620px;
-    right: 250px;
-    width: 260px;
-    height: auto;
-    z-index: 10;
-}
-
-.floating img {
-    width: 100%;  
-    height: auto;
-}
