@@ -151,19 +151,6 @@ button:hover {
     margin-top: 20px;
 }
 
-/* Estilos das mensagens */
-
-.message {
-    background-color: #f9f9f9;
-    border: 1px solid #990033;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 4px;
-    white-space: pre-wrap;
-    font-size: 1.1em;
-    box-sizing: border-box;
-}
-
 .message-container .input-container {
     display: flex;
     margin-top: 10px;
@@ -317,23 +304,6 @@ button:hover {
 
 .login-button:hover {
     background-color: #990033;
-    transform: translateY(-3px);
-}
-
-.cadastro {
-    width: calc(100% - 30px); /* Ajuste a largura do botão para o novo tamanho do contêiner */
-    padding: 15px;
-    background-color: transparent;
-    color: #990033;
-    border: none;
-    border-radius: 25px;
-    font-size: 1.3em; /* Aumente o tamanho da fonte do botão */
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.cadastro:hover {
-    background-color: transparent;
     transform: translateY(-3px);
 }
 

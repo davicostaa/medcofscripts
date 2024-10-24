@@ -20,3 +20,16 @@
     text-decoration: none; /* Remove qualquer sublinhado */
     outline: none; /* Remove o contorno ao clicar */
 }
+
+/* Estilos das mensagens */
+
+.message {
+    background-color: #f9f9f9;
+    border: 1px solid #990033;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    font-size: 1.1em;
+    box-sizing: border-box;
+}
