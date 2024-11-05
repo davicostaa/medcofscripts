@@ -1,12 +1,12 @@
-@import '../global/global.css';
-@import './avisosfrequentes.css';
+@import "../frequentes.css";
 
-.frequente {
+.cancel {
+    font-family: 'Montserrat', sans-serif;
     background-color: transparent;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 20px #580303;
-    width: 700px;
+    width: 1000px;
     border-top: 6px solid #990033;
     border-bottom: 6px solid #990033;
     max-height: 90vh;
@@ -14,11 +14,14 @@
     box-sizing: border-box;
     position: relative;
     height: 750px;
+    left: 150px;
 }
 
-.frequente button{
-    width: 400px;
-    display: block; /* Certifica-se de que o botão ocupe toda a linha */
-    margin: 0 auto; /* Centraliza horizontalmente */
-    margin-top: 50px;
+.cancel p{
+    font-size: 1.16em;
+}
+
+.cancel div[contenteditable="true"] {
+    text-decoration: none; /* Remove qualquer sublinhado */
+    outline: none; /* Remove o contorno ao clicar */
 }

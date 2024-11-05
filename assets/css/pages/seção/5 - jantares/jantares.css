@@ -1,5 +1,6 @@
-@import '../global/global.css';
+@import '../../../global/global.css';
 @import './avisosjantares.css';
+@import './botões/capacidade.css';
 
 .jantares {
     background-color: transparent;
@@ -22,3 +23,4 @@
     margin: 0 auto; /* Centraliza horizontalmente */
     margin-top: 50px;
 }
+

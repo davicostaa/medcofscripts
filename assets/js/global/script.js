@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
         // Função para carregar a planilha e validar os dados
         function validarDadosComPlanilha() {
-            const fileInput = 'assets/src/arquivos/Info Login MedCof Scripts.xlsx';  // Caminho da sua planilha
+            const fileInput = '../src/arquivos/Info Login MedCof Scripts.xlsx';  // Caminho da sua planilha
             fetch(fileInput)
                 .then(res => res.arrayBuffer())
                 .then(data => {
@@ -242,102 +242,80 @@ function handleFile(e) {
     reader.onload = function(event) {
         const data = new Uint8Array(event.target.result);
         const workbook = XLSX.read(data, {type: 'array'});
-
-        // Exibe a lista de abas (folhas) disponíveis
-        const sheetNames = workbook.SheetNames;
-        displaySheetSelection(sheetNames, workbook);
+        const firstSheetName = workbook.SheetNames[0];
+        const worksheet = workbook.Sheets[firstSheetName];
+        const json = XLSX.utils.sheet_to_json(worksheet, {header: 1, raw: false});
+        loadFont();
+        generateTable(json);
     };
 
     reader.readAsArrayBuffer(file);
 }
 
-// Função para exibir as opções de abas
-function displaySheetSelection(sheetNames, workbook) {
-    // Obtém o elemento HTML onde as opções de abas serão exibidas
-    const sheetSelector = document.getElementById('sheetSelector');
+// Função para carregar a fonte
+function loadFont() {
+    const link = document.createElement('link');
+    link.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
     
-    // Limpa o conteúdo anterior do seletor de abas, se houver
-    sheetSelector.innerHTML = ''; 
-
-    // Cria um rótulo (label) para instruir o usuário a escolher uma aba
-    const label = document.createElement('label');
-    label.textContent = 'Escolha a aba: ';
-    sheetSelector.appendChild(label); // Adiciona o rótulo ao contêiner
-
-    // Cria um elemento <select> para exibir as opções das abas
-    const select = document.createElement('select');
-    select.id = 'sheetSelect'; // Define um ID para o <select>
-
-    // Itera sobre o array de nomes de abas (sheetNames) e cria uma <option> para cada uma
-    sheetNames.forEach((sheetName) => {
-        const option = document.createElement('option'); // Cria um elemento <option>
-        option.value = sheetName;  // Define o valor da opção como o nome da aba
-        option.textContent = sheetName; // Define o texto visível da opção
-        select.appendChild(option); // Adiciona a opção ao <select>
-    });
-
-    // Adiciona o seletor de abas ao contêiner
-    sheetSelector.appendChild(select);
-
-    // Cria um botão para carregar a aba selecionada
-    const loadButton = document.createElement('button');
-    loadButton.textContent = 'Carregar Aba'; // Define o texto do botão
-
-    // Adiciona um ouvinte de evento ao botão para executar ações quando clicado
-    loadButton.addEventListener('click', function() {
-        // Obtém o nome da aba selecionada
-        const selectedSheetName = select.value;
-        
-        // Obtém a planilha correspondente (aba) do workbook usando o nome selecionado
-        const worksheet = workbook.Sheets[selectedSheetName];
-        
-        // Converte a planilha em um array de JSON (usando XLSX.utils.sheet_to_json)
-        const json = XLSX.utils.sheet_to_json(worksheet, {header: 1, raw: false});
-        
-        // Chama a função que gera a tabela com os dados da aba selecionada
-        generateTable(json);  
-    });
-
-    // Adiciona o botão de carregar aba ao contêiner
-    sheetSelector.appendChild(loadButton);
+    const style = document.createElement('style');
+    style.innerHTML = `body { font-family: 'Montserrat', sans-serif; }`;
+    document.head.appendChild(style);
 }
 
-// Função para gerar a tabela a partir dos dados (continua a mesma)
+// Função para formatar datas
+function formatDate(value) {
+    if (value instanceof Date) {
+        return value.toLocaleDateString('pt-BR');
+    } else if (typeof value === 'string' && value.match(/^\d{2}\/\d{2}\/\d{4}$/)) {
+        const date = new Date(value.split('/').reverse().join('-'));
+        return date.toLocaleDateString('pt-BR');
+    } else {
+        return value;
+    }
+}
+
+// Função para gerar a tabela a partir dos dados
 function generateTable(data) {
     const tableContainer = document.getElementById('tableContainer');
     tableContainer.innerHTML = '';
-
+    
     if (data.length === 0) {
         tableContainer.innerHTML = '<p>Nenhum dado encontrado no arquivo.</p>';
         return;
     }
-
+    
     const table = document.createElement('table');
     table.className = 'data-table';
-
+    
     const thead = document.createElement('thead');
     const headerRow = document.createElement('tr');
 
+    // Adiciona a célula de seleção na primeira linha
     const thSelect = document.createElement('th');
     headerRow.appendChild(thSelect);
 
+    // Adiciona os cabeçalhos das colunas
     const columnNames = data[0];
     columnNames.forEach((header, index) => {
         const th = document.createElement('th');
         th.textContent = header || `Coluna ${index + 1}`;
         headerRow.appendChild(th);
     });
-
+    
     thead.appendChild(headerRow);
     table.appendChild(thead);
-
+    
     const tbody = document.createElement('tbody');
-
+    
     data.slice(1).forEach(row => {
-        if (row.every(cell => !cell || cell.trim() === '')) return;
-
+        // Verifica se a linha está vazia
+        if (row.every(cell => !cell || cell.trim() === '')) return; // Ignora linhas em branco
+    
         const tr = document.createElement('tr');
-        
+    
+        // Adiciona a célula de seleção
         const selectButton = document.createElement('div');
         selectButton.className = 'select-button';
         selectButton.addEventListener('click', function() {
@@ -347,64 +325,74 @@ function generateTable(data) {
         const tdSelect = document.createElement('td');
         tdSelect.appendChild(selectButton);
         tr.appendChild(tdSelect);
-
+    
+        // Adiciona as células de dados
         row.forEach((value, index) => {
             const td = document.createElement('td');
             td.textContent = formatDate(value);
             tr.appendChild(td);
         });
-
+    
         tbody.appendChild(tr);
     });
-
+    
     table.appendChild(tbody);
     tableContainer.appendChild(table);
+    tableContainer.style.display = 'block';
+
+    // Atualiza os botões de ação após a tabela ser gerada
+    selectAllRows();
+    updateActionButtonStates('selectAll');
 }
 
 // Função para gerar mensagens
 function generateMessages() {
-    const data = []; // Cria um array vazio para armazenar os dados das linhas selecionadas
-    const tableContainer = document.getElementById('tableContainer'); // Obtém a referência do contêiner da tabela no HTML
-    const rows = tableContainer.getElementsByTagName('tr'); // Captura todas as linhas da tabela
+    const data = [];
+    const tableContainer = document.getElementById('tableContainer');
+    const rows = tableContainer.getElementsByTagName('tr');
 
     // Captura os nomes das colunas corretamente
-    const columnNames = Array.from(rows[0].getElementsByTagName('th')).slice(1).map(th => th.textContent); 
-    // Transforma os cabeçalhos das colunas (exceto a primeira) em um array com os nomes das colunas
+    const columnNames = Array.from(rows[0].getElementsByTagName('th')).slice(1).map(th => th.textContent);
 
-    for (let i = 1; i < rows.length; i++) { // Itera sobre as linhas da tabela, começando na segunda (linha de dados)
-        const row = rows[i]; // Pega a linha atual
-        const selected = row.querySelector('.select-button.selected'); // Verifica se a linha foi selecionada (classe .selected)
+    for (let i = 1; i < rows.length; i++) {
+        const row = rows[i];
+        const selected = row.querySelector('.select-button.selected');
 
-        if (selected) { // Se a linha foi selecionada
-            const rowData = {}; // Cria um objeto vazio para armazenar os dados da linha
-            const cells = row.getElementsByTagName('td'); // Obtém todas as células da linha atual
+        if (selected) {
+            const rowData = {};
+            const cells = row.getElementsByTagName('td');
 
             // Ajusta o mapeamento para começar da coluna correta
-            for (let j = 1; j < cells.length; j++) { // Itera sobre as células, começando na segunda
-                rowData[columnNames[j - 1]] = cells[j].textContent; // Atribui o conteúdo da célula ao nome da coluna correspondente
+            for (let j = 1; j < cells.length; j++) {
+                rowData[columnNames[j - 1]] = cells[j].textContent;
             }
 
-            data.push(rowData); // Adiciona o objeto da linha ao array de dados
+            data.push(rowData);
         }
     }
 
-    const output = document.getElementById('output'); // Obtém a referência do contêiner de saída (onde as mensagens serão exibidas)
-    output.innerHTML = ''; // Limpa o conteúdo anterior no contêiner de saída
+    const output = document.getElementById('output');
+    output.innerHTML = '';
 
-    data.forEach(rowData => { // Para cada conjunto de dados de linha selecionada
-        const messageContainer = document.createElement('div'); // Cria um novo elemento <div> para armazenar a mensagem
-        messageContainer.className = 'message-container'; // Define a classe do <div> como 'message-container'
+    data.forEach(rowData => {
+        const messageContainer = document.createElement('div');
+        messageContainer.className = 'message-container';
 
-        const message = document.createElement('p'); // Cria um novo elemento <p> para a mensagem
-        message.className = 'message'; // Define a classe do <p> como 'message'
-        message.textContent = generateMessageText(rowData); // Gera o texto da mensagem baseado nos dados da linha
+        const message = document.createElement('p');
+        message.className = 'message';
+        message.textContent = generateMessageText(rowData);
 
-        const inputContainer = document.createElement('div'); // Cria um novo <div> para conter o campo de input
+        const additionalTextInput = document.createElement('input');
+        additionalTextInput.addEventListener('input', function() {
+            updateMessageText(message, rowData, additionalTextInput.value);
+        });
 
-        messageContainer.appendChild(message); // Adiciona a mensagem ao contêiner da mensagem
-        messageContainer.appendChild(inputContainer); // Adiciona o contêiner do input ao contêiner da mensagem
+        const inputContainer = document.createElement('div');
+        inputContainer.className = 'input-container';
+        messageContainer.appendChild(message);
+        messageContainer.appendChild(inputContainer);
 
-        output.appendChild(messageContainer); // Adiciona o contêiner da mensagem ao contêiner de saída
+        output.appendChild(messageContainer);
     });
 }
 

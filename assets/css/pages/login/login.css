@@ -1,0 +1,84 @@
+.logincontainer {
+    background: transparent;
+    padding: 60px; /* Aumente o padding para dar mais espaço interno */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px #580303;
+    width: 500px; /* Aumente a largura do contêiner */
+    border-top: 6px solid #990033;
+    border-bottom: 6px solid #990033;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logincontainer h2 {
+    text-align: center;
+    color: #990033;
+    margin-bottom: 30px;
+    font-size: 2.2em; /* Aumente o tamanho da fonte do título */
+    font-weight: 600;
+}
+
+.logincontainer label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #990033;
+    font-weight: bold;
+    font-size: 1.3em; /* Aumente o tamanho da fonte dos rótulos */
+}
+
+.logincontainer input[type="text"], 
+.logincontainer input[type="password"], 
+.logincontainer select {
+    width: calc(100% - 40px); /* Ajuste a largura para o novo tamanho do contêiner */
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 1.2em; /* Aumente o tamanho da fonte dos inputs */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    background: transparent; /* Substitua a cor de fundo por transparente */
+}
+
+.logincontainer input[type="text"]:focus, 
+.logincontainer input[type="password"]:focus, 
+.logincontainer select:focus {
+    border-color: #990033;
+    outline: none;
+}
+
+.logincontainer input[type="text"]::placeholder, 
+.logincontainer input[type="password"]::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+.hidden {
+    display: none;
+}
+
+.login-button {
+    width: calc(100% - 30px); /* Ajuste a largura do botão para o novo tamanho do contêiner */
+    padding: 15px;
+    background-color: #990033;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.3em; /* Aumente o tamanho da fonte do botão */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #990033;
+    transform: translateY(-3px);
+}
+
+/* Efeito de foco nos campos de entrada */
+.logincontainer input[type="text"]:focus, 
+.logincontainer input[type="password"]:focus {
+    border-color: #990033;
+    box-shadow: 0 0 10px rgba(153, 0, 51, 0.2);
+}

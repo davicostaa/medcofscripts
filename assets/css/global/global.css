@@ -1,9 +1,11 @@
 @import './cofbot.css';
 @import './logo.css';
-@import '../pages/1\ -\ página\ inicial/page.css';
-@import '../pages/2\ -\ mensagens\ frequentes/frequentes.css';
-@import '../pages/3\ -\ mensagens\ automatizadas/automatizadas.css';
-@import '../pages/4\ -\ jantares/jantares.css';
+@import '../pages/seção/1\ -\ seção\ de\ scripts/seção.css';
+@import '../pages/seção/2\ -\ página\ inicial/page.css';
+@import '../pages/seção/3\ -\ mensagens\ frequentes/frequentes.css';
+@import '../pages/seção/4\ -\ mensagens\ automatizadas/automatizadas.css';
+@import '../pages/seção/5\ -\ jantares/jantares.css';
+@import '../pages/login/login.css';
 
 /* Estilos para o corpo da página */
 body {
@@ -25,75 +27,6 @@ header {
     position: absolute;
     top: -80px;
     left: 10px;
-}
-
-.seção {
-    font-family: 'Montserrat', sans-serif;
-    position: absolute;
-    top: 80px;
-    left: 250px;
-    background-color: transparent;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #580303;
-    width: 300px;
-    height: 700px;
-    border-top: 6px solid #990033;
-    border-bottom: 6px solid #990033;
-    color: #333333;
-    z-index: 10;
-}
-
-.cancel {
-    font-family: 'Montserrat', sans-serif;
-    background-color: transparent;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px #580303;
-    width: 1000px;
-    border-top: 6px solid #990033;
-    border-bottom: 6px solid #990033;
-    max-height: 90vh;
-    overflow-y: auto;
-    box-sizing: border-box;
-    position: relative;
-    height: 750px;
-    left: 150px;
-}
-
-.cancel p{
-    font-size: 1.16em;
-}
-
-.cancel div[contenteditable="true"] {
-    text-decoration: none; /* Remove qualquer sublinhado */
-    outline: none; /* Remove o contorno ao clicar */
-}
-
-.capacidade {
-    font-family: 'Montserrat', sans-serif;
-    background-color: transparent;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px #580303;
-    width: 1000px;
-    border-top: 6px solid #990033;
-    border-bottom: 6px solid #990033;
-    max-height: 90vh;
-    overflow-y: auto;
-    box-sizing: border-box;
-    position: relative;
-    height: 750px;
-    left: 150px;
-}
-
-.capacidade p{
-    font-size: 1.16em;
-}
-
-.capacidade div[contenteditable="true"] {
-    text-decoration: none; /* Remove qualquer sublinhado */
-    outline: none; /* Remove o contorno ao clicar */
 }
 
 /* Estilos para cabeçalhos */
@@ -226,90 +159,4 @@ button:hover {
     content: "✔";
     color: white;
     font-size: 14px;
-}
-
-/* Estilos do contêiner de login aprimorado */
-.logincontainer {
-    background: transparent;
-    padding: 60px; /* Aumente o padding para dar mais espaço interno */
-    border-radius: 12px;
-    box-shadow: 0 10px 30px #580303;
-    width: 500px; /* Aumente a largura do contêiner */
-    border-top: 6px solid #990033;
-    border-bottom: 6px solid #990033;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.logincontainer h2 {
-    text-align: center;
-    color: #990033;
-    margin-bottom: 30px;
-    font-size: 2.2em; /* Aumente o tamanho da fonte do título */
-    font-weight: 600;
-}
-
-.logincontainer label {
-    display: block;
-    margin: 10px 0 5px;
-    color: #990033;
-    font-weight: bold;
-    font-size: 1.3em; /* Aumente o tamanho da fonte dos rótulos */
-}
-
-.logincontainer input[type="text"], 
-.logincontainer input[type="password"], 
-.logincontainer select {
-    width: calc(100% - 40px); /* Ajuste a largura para o novo tamanho do contêiner */
-    padding: 15px 20px;
-    margin-bottom: 20px;
-    border: 2px solid #ddd;
-    border-radius: 25px;
-    font-size: 1.2em; /* Aumente o tamanho da fonte dos inputs */
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
-    background: transparent; /* Substitua a cor de fundo por transparente */
-}
-
-.logincontainer input[type="text"]:focus, 
-.logincontainer input[type="password"]:focus, 
-.logincontainer select:focus {
-    border-color: #990033;
-    outline: none;
-}
-
-.logincontainer input[type="text"]::placeholder, 
-.logincontainer input[type="password"]::placeholder {
-    color: #999;
-    font-style: italic;
-}
-
-.hidden {
-    display: none;
-}
-
-.login-button {
-    width: calc(100% - 30px); /* Ajuste a largura do botão para o novo tamanho do contêiner */
-    padding: 15px;
-    background-color: #990033;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    font-size: 1.3em; /* Aumente o tamanho da fonte do botão */
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.login-button:hover {
-    background-color: #990033;
-    transform: translateY(-3px);
-}
-
-/* Efeito de foco nos campos de entrada */
-.logincontainer input[type="text"]:focus, 
-.logincontainer input[type="password"]:focus {
-    border-color: #990033;
-    box-shadow: 0 0 10px rgba(153, 0, 51, 0.2);
 }
