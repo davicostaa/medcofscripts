@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
         // Função para carregar a planilha e validar os dados
         function validarDadosComPlanilha() {
-            const fileInput = '../src/pages/login/Info Login MedCof Scripts.xlsx';  // Caminho da sua planilha
+            const fileInput = 'assets/src/pages/login/Info Login MedCof Scripts.xlsx';  // Caminho da sua planilha
             fetch(fileInput)
                 .then(res => res.arrayBuffer())
                 .then(data => {
