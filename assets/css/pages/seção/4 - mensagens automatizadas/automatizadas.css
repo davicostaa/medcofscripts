@@ -12,8 +12,9 @@
     max-height: 90vh;
     overflow-y: auto;
     box-sizing: border-box;
-    position: relative;
-    height: 750px;
+    position: absolute;
+    height: 700px;
+    top: 80px;
 }
 
 .container div[contenteditable="true"] {
@@ -32,4 +33,10 @@
     white-space: pre-wrap;
     font-size: 1.1em;
     box-sizing: border-box;
+}
+
+@media screen and (min-width: 2560px) {
+    .container{
+        height: 740px;
+    }
 }

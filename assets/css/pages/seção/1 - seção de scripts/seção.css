@@ -10,9 +10,16 @@
     border-radius: 8px;
     box-shadow: 0 0 10px #580303;
     width: 300px;
-    height: 700px;
+    height: 650px;
     border-top: 6px solid #990033;
     border-bottom: 6px solid #990033;
     color: #333333;
     z-index: 10;
+}
+
+@media screen and (min-width: 2560px) {
+    .seção{
+        left: 575px;
+        height: 690px;
+    }
 }

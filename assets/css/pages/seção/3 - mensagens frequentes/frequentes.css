@@ -13,8 +13,9 @@
     max-height: 90vh;
     overflow-y: auto;
     box-sizing: border-box;
-    position: relative;
-    height: 750px;
+    position: absolute;
+    height: 700px;
+    top: 80px;
 }
 
 .frequente button{
@@ -24,3 +25,8 @@
     margin-top: 50px;
 }
 
+@media screen and (min-width: 2560px) {
+    .frequente{
+        height: 740px;
+    }
+}

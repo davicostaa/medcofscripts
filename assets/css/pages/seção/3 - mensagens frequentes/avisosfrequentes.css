@@ -4,7 +4,7 @@
     font-family: 'Montserrat', sans-serif;
     position: absolute;
     top: 80px;
-    left: 1330px;
+    right: 200px;
     background-color: transparent;
     padding: 20px;
     border-radius: 8px;
@@ -29,4 +29,10 @@
     margin: 10px 0 0;
     color: #333333;
     font-size: 1.1em;
+}
+
+@media screen and (min-width: 2560px) {
+    .avisosfrequentes{
+        right: 525px;
+    }
 }

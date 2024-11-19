@@ -12,6 +12,13 @@
     max-height: 90vh;
     overflow-y: auto;
     box-sizing: border-box;
-    position: relative;
-    height: 750px;
+    position: absolute;
+    height: 700px;
+    top: 80px;
+}
+
+@media screen and (min-width: 2560px) {
+    .page{
+        height: 740px;
+    }
 }
