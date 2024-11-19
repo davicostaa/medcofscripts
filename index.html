@@ -31,53 +31,41 @@
         
         <div class="button-container">
                 <button id="btnAutomatedMessages">Mensagens Automatizadas</button></div>
-
-        <div class="button-container">
-            <button id="btnJantares">Jantares</button></div>
-        </div>
+    </div>
         
         <!-- Campo de Mensagens Personalizadas, inicialmente oculto -->
-        <div class="page">
-            <h1>Bem-vindo ao MedCof Scripts</h1>
-            <form id="frequenteForm" enctype="multipart/form-data"></form>
-        </div>
+    <div class="page">
+        <h1>Bem-vindo ao MedCof Scripts</h1>
+        <form id="frequenteForm" enctype="multipart/form-data"></form>
+    </div>
     
-        <div class="frequente">
-            <h1>Perguntas Frequentes</h1>
-            <form id="frequenteForm" enctype="multipart/form-data"></form>
-            <div class="btncancel">
-                <button id="btncancel">Argumentação de possível cancelamento</button>
-            </div>
-        </div> 
+    <div class="frequente">
+        <h1>Perguntas Frequentes</h1>
+        <form id="frequenteForm" enctype="multipart/form-data"></form>
+        <div class="btncancel">
+            <button id="btncancel">Argumentação de possível cancelamento</button>
+        </div>
+    </div> 
 
-        <div class="container">
-            <h1>Mensagens Automatizadas</h1>
-            <form id="messageForm" enctype="multipart/form-data">
-                <label for="textoBase">Texto Base:</label>
-                <textarea id="textoBase" name="textoBase" rows="6" placeholder="Digite o texto base aqui..."></textarea>           
-                <label for="fileInput">Carregar arquivo .xlsx</label>
-                <input type="file" id="fileInput" accept=".xlsx, .xls">
-                <div id="sheetSelector"></div>
-                <div id="tableContainer"></div>            
-                <div class="button-group">
-                    <button type="button" id="selectAllButton" class="action-button">✔ Selecionar Todos</button>
-                    <button type="button" id="deselectAllButton" class="action-button">✔ Selecionar Nenhum</button>
-                </div>
-            </form>
-        
-            <div id="tableContainer"></div>
-            <button id="generateMessagesButton">Gerar Mensagens</button>
-            <div contenteditable="true" spellcheck="false"></div>
-            <div id="output"></div>
-        </div>
-    
-        <div class="jantares">
-            <h1>Jantares</h1>
-            <form id="frequenteForm" enctype="multipart/form-data"></form>
-            <div class="btncapacidade">
-                <button id="btncapacidade">Capacidade</button>
+    <div class="container">
+        <h1>Mensagens Automatizadas</h1>
+        <form id="messageForm" enctype="multipart/form-data">
+            <label for="textoBase">Texto Base:</label>
+            <textarea id="textoBase" name="textoBase" rows="6" placeholder="Digite o texto base aqui..."></textarea>           
+            <label for="fileInput">Carregar arquivo .xlsx</label>
+            <input type="file" id="fileInput" accept=".xlsx, .xls">
+            <div id="sheetSelector"></div>
+            <div id="tableContainer"></div>            
+            <div class="button-group">
+                <button type="button" id="selectAllButton" class="action-button">✔ Selecionar Todos</button>
+                <button type="button" id="deselectAllButton" class="action-button">✔ Selecionar Nenhum</button>
             </div>
-        </div>  
+        </form>
+        
+        <div id="tableContainer"></div>
+        <button id="generateMessagesButton">Gerar Mensagens</button>
+        <div contenteditable="true" spellcheck="false"></div>
+        <div id="output"></div>
     </div>
     
     <div class="cancel">
@@ -97,12 +85,6 @@
         </div>
     </div>
 
-    <div class="capacidade">
-        <h1>Capacidade dos jantares atingidas até o momento</h1>
-        <div contenteditable="true" spellcheck="false">
-            <form id="frequenteForm" enctype="multipart/form-data"></form>
-        </div>
-    </div>
 </body>
         <!-- Formulário de Login -->
     <div class="logincontainer">
@@ -120,7 +102,8 @@
             <label for="sector">Setor</label>
             <select id="sector" name="sector" required>
                 <option value="" disabled selected>Selecione um setor</option>
-                <option value="Marketing">Marketing</option>
+                <option value="Marketing">QBank</option>
+                <option value="Marketing">Conteúdo</option>
                 <option value="Processos e Acompanhamentos">Processos e Acompanhamentos</option>
                 <option value="Novos Negócios">Novos Negócios</option>
                 <option value="Recursos Humanos">Recursos Humanos</option>
@@ -150,10 +133,6 @@
         <p>Este script de mensagens automáticas foi projetado para otimizar a integração de dados com textos personalizados para o envio eficiente de mensagens. Ao elaborar sua mensagem, insira entre chaves `{}` os nomes das colunas de dados que deseja utilizar da planilha, e o sistema fará a substituição automática pelos valores correspondentes</p>
     </div>
 
-    <div class="avisosjantares">
-        <h2>Avisos</h2>
-        <p>O campo de jantares integra o setor de novos negócios, automatizando tarefas e melhorando a eficiência. A ideia é ajudar no planejamento de jantares com soluções inovadoras, permitindo à equipe focar em criação de novas oportunidades e otimização da experiência dos participantes</p>
-    </div>
         <!-- Robô Flutuante -->
     <div class="floating">
         <img src="assets/src/global/cofbot.gif" alt="Robô Flutuante">

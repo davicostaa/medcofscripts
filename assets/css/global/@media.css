@@ -1,0 +1,39 @@
+@import './global.css';
+
+/* 4k-2560px */
+@media screen and (min-width: 2560px) {
+    /* Estilos específicos para telas com largura mínima de 2560px */
+}
+
+/* L-1440px */
+@media screen and (min-width: 1440px) {
+    /* Estilos específicos para telas com largura mínima de 1440px */
+}
+
+/* laptop-1024px */
+@media screen and (min-width: 1024px) {
+    /* Estilos específicos para telas com largura mínima de 1024px */
+}
+
+/* tablet-768px */
+@media screen and (min-width: 768px) {
+    /* Estilos específicos para telas com largura mínima de 768px */
+}
+
+/* mobile L-425px */
+@media screen and (min-width: 425px) {
+    /* Estilos específicos para telas com largura mínima de 425px */
+}
+
+/* mobile M-375px */
+@media screen and (min-width: 375px) {
+    /* Estilos específicos para telas com largura mínima de 375px */
+}
+
+/* mobile S-320px */
+@media screen and (min-width: 320px) {
+    .logo {
+        width: 350px;
+        height: auto;
+    }
+}

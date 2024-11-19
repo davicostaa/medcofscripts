@@ -3,4 +3,14 @@
 .logo {
     width: 350px;
     height: auto;
+    position: absolute;
+}
+
+@media screen and (min-width: 2560px) {
+    /* Estilos específicos para telas com largura mínima de 2560px */
+    .logo{
+        left: 100px;
+        height: 400px;
+        width: 400px;
+    }
 }
