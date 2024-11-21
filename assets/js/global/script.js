@@ -24,9 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const frequente = document.querySelector('.frequente');
     frequente.classList.add('hidden');
 
-    const logo = document.querySelector('.logo');
-    logo.classList.remove('hidden');
-
     const page = document.querySelector('.page');
     page.classList.add('hidden');
 
@@ -73,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         container.classList.add('hidden');
                         floating.classList.remove('hidden');
                         frequente.classList.add('hidden');
-                        logo.classList.add('hidden');
                         page.classList.remove('hidden');
                         seção.classList.remove('hidden');
                         logincontainer.classList.add('hidden');

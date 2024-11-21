@@ -12,9 +12,10 @@
     max-height: 90vh;
     overflow-y: auto;
     box-sizing: border-box;
-    position: relative;
-    height: 750px;
-    left: 150px;
+    position: absolute;
+    height: 700px;
+    right: 310px;
+    top: 125px;
 }
 
 .cancel p{
@@ -24,4 +25,11 @@
 .cancel div[contenteditable="true"] {
     text-decoration: none; /* Remove qualquer sublinhado */
     outline: none; /* Remove o contorno ao clicar */
+}
+
+@media screen and (min-width: 2560px) {
+    .cancel{
+        right: 630px;
+        height: 743px;
+    }
 }

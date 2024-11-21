@@ -4,13 +4,14 @@
     width: 350px;
     height: auto;
     position: absolute;
+    left: 40px;
+    top: 30px;
 }
 
 @media screen and (min-width: 2560px) {
     /* Estilos específicos para telas com largura mínima de 2560px */
     .logo{
-        left: 100px;
-        height: 400px;
-        width: 400px;
+        left: 140px;
+        top: 10px;
     }
 }

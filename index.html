@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medcof Scripts</title>
+    <title>MedCof Scripts</title>
     <link rel="stylesheet" href="assets/css/global/global.css">
     <link rel="shortcut icon" type="image/png" href="assets/src/global/favicon.png"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
@@ -15,80 +15,6 @@
 
 <body>
     <!-- Cabeçalho -->
-     <div>
-        <header>
-            <img src="assets/src/global/logo.png" alt="Logo" class="logo" id="logo">
-        </header>
-     </div>
-
-    <div class="seção">
-        <h1>Scripts</h1>
-        <div class="button-container">
-            <button id="btnpage">Página Inicial</button></div>
-        
-        <div class="button-container">
-            <button id="btnFrequentes">Mensagens Frequentes</button></div>
-        
-        <div class="button-container">
-                <button id="btnAutomatedMessages">Mensagens Automatizadas</button></div>
-        <div class="button-container">
-                <button id="btncadastro">Cadastramento de Questões</button></div>
-    </div>
-        
-        <!-- Campo de Mensagens Personalizadas, inicialmente oculto -->
-    <div class="page">
-        <h1>Bem-vindo ao MedCof Scripts</h1>
-        <form id="frequenteForm" enctype="multipart/form-data"></form>
-    </div>
-    
-    <div class="frequente">
-        <h1>Perguntas Frequentes</h1>
-        <form id="frequenteForm" enctype="multipart/form-data"></form>
-        <div class="btncancel">
-            <button id="btncancel">Argumentação de possível cancelamento</button>
-        </div>
-    </div> 
-
-    <div class="container">
-        <h1>Mensagens Automatizadas</h1>
-        <form id="messageForm" enctype="multipart/form-data">
-            <label for="textoBase">Texto Base:</label>
-            <textarea id="textoBase" name="textoBase" rows="6" placeholder="Digite o texto base aqui..."></textarea>           
-            <label for="fileInput">Carregar arquivo .xlsx</label>
-            <input type="file" id="fileInput" accept=".xlsx, .xls">
-            <div id="sheetSelector"></div>
-            <div id="tableContainer"></div>            
-            <div class="button-group">
-                <button type="button" id="selectAllButton" class="action-button">✔ Selecionar Todos</button>
-                <button type="button" id="deselectAllButton" class="action-button">✔ Selecionar Nenhum</button>
-            </div>
-        </form>
-        
-        <div id="tableContainer"></div>
-        <button id="generateMessagesButton">Gerar Mensagens</button>
-        <div contenteditable="true" spellcheck="false"></div>
-        <div id="output"></div>
-    </div>
-    
-    <div class="cancel">
-        <h1>Argumentação de possível cancelamento</h1>
-        <div contenteditable="true" spellcheck="false">
-            <form id="frequenteForm" enctype="multipart/form-data"></form>
-            <p>Abertura: <span style="color: red;">Dr. Gabriel</span>, sinto muito pelo que está passando. Neste primeiro momento, nossos termos de uso não temos a opção de trancar. A sua compra não está mais dentro do período de 7 dias de garantia. Diante disso, me coloco à disposição para ajudá-<span style="color: red;">lo</span> a não desistir da sua prova neste ano, seja com um guia de estudos ou com suporte sobre a plataforma, caso esteja enfrentando alguma dificuldade. Nosso curso não comtempla assinatura, no ato da compra, você recebe de formato de aderência, ou seja o curso por completo em um determinado período com a opção de ser pago a vista, ou parcelado.</p>
-            <p>Argumentação 1: O cancelamento pode ser realizado dentro de 7 dias da garantia, conforme o termo de uso <a href="https://www.grupomedcof.com.br/termos-de-uso/">https://www.grupomedcof.com.br/termos-de-uso/</a>. Mas entendemos a situação e o motivo da desistência e estamos sempre disponíveis para ajudar a melhorar a sua jornada de estudos! <br>Hoje como podemos te auxiliar para melhorar a sua experiência MedCof?<br><br>
-                Argumentação 2: Analisei no seu histórico de estudos e hoje você acabou aproveitando bem pouco dos nossos recursos MedCof. Possuímos o modelo AQFM que comtempla aula, questão, FlashCard e material de apoio. Ainda tem tempo, a sua assinatura é valida por <span style="color: red;"> X </span> período.</p>
-            <p>Argumentação de retorno<br>
-                Solicitação de retorno: Olá, <span style="color: red;">Dr. Gabriel</span>! Podemos continuar o atendimento?
-            </p>
-            <p>Encerramento do chat<br>
-                Fechamento: Olá, <span style="color: red;">Dr. Gabriel</span>. Tudo bem? Faz um tempinho que não conversamos. Vou encerrar nosso chat por falta de interação, mas caso tenha alguma dúvida, pode nos acionar novamente! Tenha <span style="color: red;">uma</span> ótima <span style="color: red;">tarde</span>.<br>
-            </p>
-            <p><strong>Esta página é editável. Por favor, ajuste os textos destacados em vermelho conforme necessário para atendimento ao cliente.</strong></p>
-        </div>
-    </div>
-
-</body>
-        <!-- Formulário de Login -->
     <div class="logincontainer">
         <h1>Login</h1>
         <form id="loginForm">
@@ -119,6 +45,78 @@
             <button class="login-button">Entrar</button>
         </form>
     </div>
+    <div>
+        <header>
+            <img src="assets/src/global/logo.png" alt="Logo" class="logo" id="logo">
+        </header>
+    </div>
+
+    <div class="seção">
+        <h1>Scripts</h1>
+        <div class="button-container">
+            <button id="btnpage">Página Inicial</button></div>
+        
+        <div class="button-container">
+            <button id="btnFrequentes">Mensagens Frequentes</button></div>
+        
+        <div class="button-container">
+                <button id="btnAutomatedMessages">Mensagens Automatizadas</button></div>
+        <div class="button-container">
+                <button id="btncadastro">Cadastramento de Questões</button></div>
+    </div>
+        
+        <!-- Campo de Mensagens Personalizadas, inicialmente oculto -->
+    <div class="page">
+        <h1>Bem-vindo ao MedCof Scripts!</h1>
+        <form id="frequenteForm" enctype="multipart/form-data"></form>
+    </div>
+    
+    <div class="frequente">
+        <h1>Perguntas Frequentes</h1>
+        <form id="frequenteForm" enctype="multipart/form-data"></form>
+        <div class="btncancel">
+            <button id="btncancel">Argumentação de possível cancelamento</button>
+        </div>
+    </div> 
+
+    <div class="container">
+        <h1>Mensagens Automatizadas</h1>
+        <form id="messageForm" enctype="multipart/form-data">           
+            <label for="fileInput">Carregar arquivo .xlsx</label>
+            <input type="file" id="fileInput" accept=".xlsx, .xls">
+            <div id="sheetSelector"></div>
+            <div id="tableContainer"></div>            
+            <div class="button-group">
+                <button type="button" id="selectAllButton" class="action-button">✔ Selecionar Todos</button>
+                <button type="button" id="deselectAllButton" class="action-button">✔ Selecionar Nenhum</button>
+            </div>
+            <label for="textoBase">Texto Base:</label>
+            <textarea id="textoBase" name="textoBase" rows="6" placeholder="Digite o texto base aqui..."></textarea>
+        </form>
+        
+        <div id="tableContainer"></div>
+        <button id="generateMessagesButton">Gerar Mensagens</button>
+        <div contenteditable="true" spellcheck="false"></div>
+        <div id="output"></div>
+    </div>
+    
+    <div class="cancel">
+        <h1>Argumentação de possível cancelamento</h1>
+        <div contenteditable="true" spellcheck="false">
+            <form id="frequenteForm" enctype="multipart/form-data"></form>
+            <p>Abertura: <span style="color: red;">Dr. Gabriel</span>, sinto muito pelo que está passando. Neste primeiro momento, nossos termos de uso não temos a opção de trancar. A sua compra não está mais dentro do período de 7 dias de garantia. Diante disso, me coloco à disposição para ajudá-<span style="color: red;">lo</span> a não desistir da sua prova neste ano, seja com um guia de estudos ou com suporte sobre a plataforma, caso esteja enfrentando alguma dificuldade. Nosso curso não comtempla assinatura, no ato da compra, você recebe de formato de aderência, ou seja o curso por completo em um determinado período com a opção de ser pago a vista, ou parcelado.</p>
+            <p>Argumentação 1: O cancelamento pode ser realizado dentro de 7 dias da garantia, conforme o termo de uso <a href="https://www.grupomedcof.com.br/termos-de-uso/">https://www.grupomedcof.com.br/termos-de-uso/</a>. Mas entendemos a situação e o motivo da desistência e estamos sempre disponíveis para ajudar a melhorar a sua jornada de estudos! <br>Hoje como podemos te auxiliar para melhorar a sua experiência MedCof?<br><br>
+                Argumentação 2: Analisei no seu histórico de estudos e hoje você acabou aproveitando bem pouco dos nossos recursos MedCof. Possuímos o modelo AQFM que comtempla aula, questão, FlashCard e material de apoio. Ainda tem tempo, a sua assinatura é valida por <span style="color: red;"> X </span> período.</p>
+            <p>Argumentação de retorno<br>
+                Solicitação de retorno: Olá, <span style="color: red;">Dr. Gabriel</span>! Podemos continuar o atendimento?
+            </p>
+            <p>Encerramento do chat<br>
+                Fechamento: Olá, <span style="color: red;">Dr. Gabriel</span>. Tudo bem? Faz um tempinho que não conversamos. Vou encerrar nosso chat por falta de interação, mas caso tenha alguma dúvida, pode nos acionar novamente! Tenha <span style="color: red;">uma</span> ótima <span style="color: red;">tarde</span>.<br>
+            </p>
+            <p><strong>Esta página é editável. Por favor, ajuste os textos destacados em vermelho conforme necessário para atendimento ao cliente.</strong></p>
+        </div>
+    </div>
+        <!-- Formulário de Login -->
 
     <div class="avisospage">
         <h2>Avisos</h2>
