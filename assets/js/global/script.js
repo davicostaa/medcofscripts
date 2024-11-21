@@ -12,8 +12,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const avisosmsg = document.querySelector('.avisosmsg');
     avisosmsg.classList.add('hidden');
 
+    const avisoscadastro = document.querySelector('.avisoscadastro');
+    avisoscadastro.classList.add('hidden');
+
     const cancel = document.querySelector('.cancel');
     cancel.classList.add('hidden');
+
+    const cadastro = document.querySelector('.cadastro');
+    cadastro.classList.add('hidden');
 
     const container = document.querySelector('.container');
     container.classList.add('hidden');
@@ -23,6 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const frequente = document.querySelector('.frequente');
     frequente.classList.add('hidden');
+
+    const logo = document.querySelector('.logo');
+    logo.classList.remove('hidden');
 
     const page = document.querySelector('.page');
     page.classList.add('hidden');
@@ -65,11 +74,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         avisospage.classList.remove('hidden');
                         avisosfrequentes.classList.add('hidden');
                         avisosmsg.classList.add('hidden');
+                        avisoscadastro.classList.add('hidden');
+                        cadastro.classList.add('hidden');
                         cancel.classList.add('hidden');
 
                         container.classList.add('hidden');
                         floating.classList.remove('hidden');
                         frequente.classList.add('hidden');
+                        logo.classList.add('hidden');
                         page.classList.remove('hidden');
                         seção.classList.remove('hidden');
                         logincontainer.classList.add('hidden');
@@ -92,6 +104,8 @@ document.addEventListener('DOMContentLoaded', function() {
             avisospage.classList.remove('hidden');
             avisosmsg.classList.add('hidden');
             avisosfrequentes.classList.add('hidden');
+            avisoscadastro.classList.add('hidden');
+            cadastro.classList.add('hidden');
             cancel.classList.add('hidden');
 
             container.classList.add('hidden');
@@ -105,6 +119,8 @@ document.addEventListener('DOMContentLoaded', function() {
             avisospage.classList.add('hidden');
             avisosmsg.classList.add('hidden');
             avisosfrequentes.classList.remove('hidden');
+            avisoscadastro.classList.add('hidden');
+            cadastro.classList.add('hidden');
             cancel.classList.add('hidden');
         
             container.classList.add('hidden');
@@ -118,6 +134,8 @@ document.addEventListener('DOMContentLoaded', function() {
             avisospage.classList.add('hidden');
             avisosmsg.classList.add('hidden');
             avisosfrequentes.classList.add('hidden');
+            avisoscadastro.classList.add('hidden');
+            cadastro.classList.add('hidden');
             cancel.classList.remove('hidden');
 
             container.classList.add('hidden');
@@ -128,13 +146,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
         document.getElementById('btnAutomatedMessages').addEventListener('click', function() {
-            var section = document.getElementById('avisos') & ('messageContainer');
+            var section = document.getElementById('messageContainer');
             avisospage.classList.add('hidden');
             avisosfrequentes.classList.add('hidden');
             avisosmsg.classList.remove('hidden');
+            avisoscadastro.classList.add('hidden');
+            cadastro.classList.add('hidden');
             cancel.classList.add('hidden');
 
             container.classList.remove('hidden');
+            floating.classList.remove('hidden');
+            frequente.classList.add('hidden');
+            page.classList.add('hidden');
+    });
+
+        document.getElementById('btncadastro').addEventListener('click', function() {
+            var section = document.getElementById('cadastro');
+            avisospage.classList.add('hidden');
+            avisosfrequentes.classList.add('hidden');
+            avisosmsg.classList.add('hidden');
+            avisoscadastro.classList.remove('hidden');
+            cadastro.classList.remove('hidden');
+            cancel.classList.add('hidden');
+
+            container.classList.add('hidden');
             floating.classList.remove('hidden');
             frequente.classList.add('hidden');
             page.classList.add('hidden');
