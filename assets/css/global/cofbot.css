@@ -18,32 +18,32 @@
 @media screen and (min-width: 2560px) {
     /* Estilos específicos para telas com largura mínima de 2560px */
     .floating{
-        right: 250px;
+        right: 300px;
     }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1440px) and (max-width: 2559px){
     .floating{
         right: 250px;
     }
 }
 
 /* laptop-1024px */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1439px){
     .floating{
         right: 250px;
     }
 }
 
 /* tablet-768px */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px){
     .floating{
         right: 250px;
     }
 }
 
 /* mobile L-425px */
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 425px) and (max-width:767){
     .floating{
         margin-right: 50px;
         bottom: 50px;
@@ -51,7 +51,7 @@
 }
 
 /* mobile M-375px */
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 375px) and (max-width:424){
     .floating{
         right: 250px;
         width: 170px;
