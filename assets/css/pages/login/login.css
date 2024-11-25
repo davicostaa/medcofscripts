@@ -180,9 +180,9 @@
 @media screen and (min-width: 425px) and (max-width: 767px) {
     .logincontainer{
         height: 600px;
-        width: 390px;
+        width: 380px;
         margin-top: 180px;
-        left: 290px;
+        left: 272.5px;
     }
 }
 
