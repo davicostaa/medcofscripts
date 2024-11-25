@@ -56,16 +56,16 @@
         width: 170px;
         height: auto;
         right: -170px;
-        margin-bottom: -390px;
+        margin-bottom: -350px;
     }
 }
 
 /* mobile S-320px */
 @media screen and (min-width: 320px) and (max-width: 374px) {
     .floating{
-        width: 180px;
+        width: 150px;
         height: auto;
-        right: -170px;
-        margin-bottom: -400px;
+        right: -100px;
+        margin-bottom: -270px;
     }
 }

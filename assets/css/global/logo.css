@@ -60,14 +60,16 @@
 @media screen and (min-width: 375px) and (max-width: 424px) {
     .logo{
         left: -100px;
-        top: 120px;
+        top: 90px;
     }
 }
 
 /* mobile S-320px */
 @media screen and (min-width: 320px) and (max-width: 374px) {
     .logo{
-        left: -100px;
-        top: 120px;
+        left: -90px;
+        top: 90px;
+        width: 300px;
+        height: auto;
     }
 }
