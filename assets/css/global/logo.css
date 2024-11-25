@@ -51,8 +51,8 @@
 /* mobile L-425px */
 @media screen and (min-width: 425px) {
     .logo{
-        left: 140px;
-        top: 10px;
+        left: -100px;
+        top: 80px;
     }
 }
 
