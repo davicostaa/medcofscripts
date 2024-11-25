@@ -45,6 +45,16 @@ document.addEventListener('DOMContentLoaded', function() {
     otherSectorField.style.display = 'none'; // Usa o estilo para ocultar
     otherSectorLabel.style.display = 'none'; // Usa o estilo para ocultar
 
+    document.getElementById('togglePassword').addEventListener('click', function () {
+        const passwordField = document.getElementById('password');
+        const passwordFieldType = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordField.setAttribute('type', passwordFieldType);
+    
+        // Alterna o ícone do botão
+        this.textContent = passwordFieldType === 'password' ? '👀' : '👁‍🗨';
+    });
+    
+
     // Manipulação do formulário de login
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault();

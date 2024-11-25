@@ -85,6 +85,57 @@
     box-shadow: 0 0 10px rgba(153, 0, 51, 0.2);
 }
 
+.password-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Espaçamento entre o label e o campo */
+}
+
+.input-with-button {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os itens */
+    gap: 5px; /* Espaçamento entre o campo e o botão */
+}
+
+.input-with-button input {
+    flex: 1;
+    padding: 15px; /* Aumenta o padding para se alinhar aos outros campos */
+    font-size: 1.2em; /* Igual ao restante do formulário */
+    border: 2px solid #ddd; /* Igual ao estilo geral */
+    border-radius: 25px; /* Mesma borda arredondada */
+    box-sizing: border-box;
+    background: transparent; /* Consistência com os outros campos */
+    transition: border-color 0.3s ease;
+}
+
+.input-with-button .toggle-password {
+    width: 50px; /* Proporcional ao tamanho do campo */
+    height: 50px; /* Mesmo tamanho que a altura do input */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente o emoji */
+    align-items: center; /* Centraliza verticalmente o emoji */
+    background: transparent; /* Fundo branco para harmonizar */
+    border: 2px solid #ddd; /* Mesmo estilo de borda */
+    border-radius: 50%; /* Deixa o botão redondo */
+    cursor: pointer;
+    font-size: 1.5rem; /* Tamanho ajustado para o emoji */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    margin-top: -20px;
+    margin-right: 40px;
+}
+
+/* Efeito de hover para o botão */
+.input-with-button .toggle-password:hover {
+    border-color: #990033; /* Destaca no hover */
+    background-color: rgba(153, 0, 51, 0.1); /* Adiciona um fundo sutil */
+}
+
+/* Efeito de foco no input */
+.input-with-button input:focus {
+    border-color: #990033;
+    box-shadow: 0 0 10px rgba(153, 0, 51, 0.2);
+}
+
 /* 4k-2560px */
 @media screen and (min-width: 2560px) {
     /* Estilos específicos para telas com largura mínima de 2560px */
