@@ -147,30 +147,52 @@
 
 /* L-1440px */
 @media screen and (min-width: 1440px) {
-    /* Estilos específicos para telas com largura mínima de 1440px */
+    .logincontainer{
+        height: 600px;
+        width: 550px;
+    }
 }
 
 /* laptop-1024px */
 @media screen and (min-width: 1024px) {
-    /* Estilos específicos para telas com largura mínima de 1024px */
+    .logincontainer{
+        height: 600px;
+        width: 550px;
+    }
 }
 
 /* tablet-768px */
 @media screen and (min-width: 768px) {
-    /* Estilos específicos para telas com largura mínima de 768px */
+    .logincontainer{
+        height: 600px;
+        width: 550px;
+    }
 }
 
 /* mobile L-425px */
-@media screen and (min-width: 425px) {
-    /* Estilos específicos para telas com largura mínima de 425px */
+@media screen and (min-width: 425px) and (max-width: 767px) {
+    .logincontainer{
+        height: 600px;
+        width: 550px;
+    }
 }
 
 /* mobile M-375px */
-@media screen and (min-width: 375px) {
-    /* Estilos específicos para telas com largura mínima de 375px */
+@media screen and (min-width: 375px) and (max-width: 424px) {
+    .logincontainer{
+        height: 600px;
+        width: 370px;
+        margin-top: 250px;
+        left: 272.5px;
+    }
 }
 
 /* mobile S-320px */
-@media screen and (min-width: 320px) {
-    /* Estilos específicos para telas com largura mínima de 320px */
+@media screen and (min-width: 320px) and (max-width: 374px) {
+    .logincontainer{
+        height: 600px;
+        width: 290px;
+        margin-top: 250px;
+        left: 245px;
+    }
 }
