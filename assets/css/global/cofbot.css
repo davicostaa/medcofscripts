@@ -45,7 +45,7 @@
 /* mobile L-425px */
 @media screen and (min-width: 425px) {
     .floating{
-        right: 250px;
+        margin-right: 20px;
         bottom: 50px;
     }
 }
