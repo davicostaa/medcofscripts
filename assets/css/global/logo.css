@@ -60,7 +60,7 @@
 @media screen and (min-width: 375px) and (max-width: 424px) {
     .logo{
         left: -100px;
-        top: 90px;
+        top: 80px;
     }
 }
 
@@ -68,8 +68,8 @@
 @media screen and (min-width: 320px) and (max-width: 374px) {
     .logo{
         left: -90px;
-        top: 90px;
-        width: 300px;
+        top: 50px;
+        width: 250px;
         height: auto;
     }
 }
