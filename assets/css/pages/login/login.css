@@ -173,16 +173,20 @@
     .logincontainer{
         height: 600px;
         width: 550px;
+        left: 385px;
     }
 }
 
 /* mobile L-425px */
 @media screen and (min-width: 425px) and (max-width: 767px) {
     .logincontainer{
-        height: 600px;
-        width: 380px;
-        margin-top: 180px;
-        left: 262.5px;
+        height: 540px;
+        width: 270px;
+        margin-top: 10px;
+        left: 210px;
+    }
+    .logincontainer h1{ 
+        margin-top: -30px;
     }
 }
 
@@ -191,11 +195,11 @@
     .logincontainer{
         height: 550px;
         width: 180px;
-        margin-top: 60px;
-        left: 190px;
+        margin-top: 10px;
+        left: 185px;
     }
     .logincontainer h1{ 
-        margin-top: -40px;
+        margin-top: -30px;
     }
 }
 
@@ -204,8 +208,8 @@
     .logincontainer{
         height: 550px;
         width: 150px;
-        margin-top: 50px;
-        left: 160px;
+        margin-top: 10px;
+        left: 157.5px;
     }
     .logincontainer h1{
         margin-top: -30px;
