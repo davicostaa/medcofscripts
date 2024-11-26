@@ -43,21 +43,22 @@
 }
 
 /* mobile L-425px */
-@media screen and (min-width: 425px) and (max-width:767){
+@media screen and (min-width: 425px) and (max-width:767px){
     .floating{
-        margin-right: 50px;
-        bottom: 50px;
+        width: 120px;
+        height: auto;
+        right: -110px;
+        margin-bottom: -130px;
     }
 }
 
 /* mobile M-375px */
-@media screen and (min-width: 375px) and (max-width:424){
+@media screen and (min-width: 375px) and (max-width:424px){
     .floating{
-        right: 250px;
-        width: 170px;
+        width: 120px;
         height: auto;
-        right: -170px;
-        margin-bottom: -350px;
+        right: 15px;
+        margin-bottom: -5px;
     }
 }
 

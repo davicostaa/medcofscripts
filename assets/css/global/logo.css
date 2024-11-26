@@ -46,16 +46,20 @@
 /* mobile L-425px */
 @media screen and (min-width: 425px) and (max-width: 767px) {
     .logo{
-        left: -95px;
+        left: -130px;
         top: 80px;
+        width: 350px;
+        height: auto;
     }
 }
 
 /* mobile M-375px */
 @media screen and (min-width: 375px) and (max-width: 424px) {
     .logo{
-        left: -110px;
-        top: 80px;
+        left: -70px;
+        top: 60px;
+        width: 250px;
+        height: auto;
     }
 }
 
