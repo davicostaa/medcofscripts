@@ -30,8 +30,10 @@
 /* laptop-1024px */
 @media screen and (min-width: 1024px) and (max-width: 1439px){
     .logo{
-        left: 140px;
-        top: 10px;
+        width: 450px;
+        height: auto;
+        left: -20px;
+        top: 150px;
     }
 }
 

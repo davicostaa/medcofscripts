@@ -31,7 +31,8 @@
 /* laptop-1024px */
 @media screen and (min-width: 1024px) and (max-width: 1439px){
     .floating{
-        right: 250px;
+        right: -25px;
+        margin-bottom: 150px;
     }
 }
 

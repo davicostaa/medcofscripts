@@ -163,8 +163,12 @@
 /* laptop-1024px */
 @media screen and (min-width: 1024px) and (max-width: 1439px){
     .logincontainer{
-        height: 600px;
-        width: 550px;
+        height: 700px;
+        width: 600px;
+        align-items: center;
+    }
+    .logincontainer label{
+        height: 50px;
     }
 }
 
@@ -173,7 +177,8 @@
     .logincontainer{
         height: 600px;
         width: 550px;
-        left: 385px;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -183,7 +188,7 @@
         height: 540px;
         width: 270px;
         margin-top: 10px;
-        left: 210px;
+        align-items: center;
     }
     .logincontainer h1{ 
         margin-top: -30px;
@@ -196,7 +201,7 @@
         height: 550px;
         width: 180px;
         margin-top: 10px;
-        left: 185px;
+        align-items: center;
     }
     .logincontainer h1{ 
         margin-top: -30px;
@@ -209,7 +214,7 @@
         height: 550px;
         width: 150px;
         margin-top: 10px;
-        left: 157.5px;
+        align-items: center;
     }
     .logincontainer h1{
         margin-top: -30px;
