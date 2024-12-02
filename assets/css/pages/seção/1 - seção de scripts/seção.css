@@ -3,8 +3,8 @@
 .seção {
     font-family: 'Montserrat', sans-serif;
     position: absolute;
-    top: 125px;
-    left: 250px;
+    top: 200px;
+    left: 490px;
     background-color: transparent;
     padding: 20px;
     border-radius: 8px;
@@ -19,7 +19,7 @@
 
 @media screen and (min-width: 2560px) {
     .seção{
-        left: 575px;
+        left: 890px;
         height: 690px;
     }
 }

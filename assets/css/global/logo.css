@@ -8,32 +8,34 @@
     top: 30px;
 }
 
-
-
 /* 4k-2560px */
 @media screen and (min-width: 2560px){
     .logo{
-        left: 140px;
-        width: 425px;
+        left: 70px;
+        width: 500px;
         height: auto;
+        top: -20px;
     }
 }
 
 /* L-1440px */
 @media screen and (min-width: 1440px) and (max-width: 2559px){
     .logo{
-        left: 140px;
-        top: 10px;
+        width: 450px;
+        height: auto;
+        left: 30px;
+        top: 30px;
     }
 }
 
 /* laptop-1024px */
 @media screen and (min-width: 1024px) and (max-width: 1439px){
     .logo{
-        width: 450px;
+        /*width: 450px;
         height: auto;
         left: -20px;
-        top: 150px;
+        top: 150px;*/
+        display: none;
     }
 }
 

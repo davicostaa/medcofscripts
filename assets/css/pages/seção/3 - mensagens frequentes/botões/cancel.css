@@ -14,8 +14,8 @@
     box-sizing: border-box;
     position: absolute;
     height: 700px;
-    right: 310px;
-    top: 125px;
+    right: 550px;
+    top: 200px;
 }
 
 .cancel p{
@@ -29,7 +29,7 @@
 
 @media screen and (min-width: 2560px) {
     .cancel{
-        right: 630px;
+        right: 950px;
         height: 743px;
     }
 }

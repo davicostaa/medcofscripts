@@ -18,21 +18,27 @@
 @media screen and (min-width: 2560px) {
     /* Estilos específicos para telas com largura mínima de 2560px */
     .floating{
-        right: 300px;
+        width: 250px;
+        height: auto;
+        right: 270px;
     }
 }
 
 @media screen and (min-width: 1440px) and (max-width: 2559px){
     .floating{
-        right: 250px;
+        width: 250px;
+        height: auto;
+        right: 180px;
+        margin-bottom: 50px;
     }
 }
 
 /* laptop-1024px */
 @media screen and (min-width: 1024px) and (max-width: 1439px){
     .floating{
-        right: -25px;
-        margin-bottom: 150px;
+        /*right: -25px;
+        margin-bottom: 150px;*/
+        display: none;
     }
 }
 

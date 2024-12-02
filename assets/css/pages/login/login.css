@@ -11,6 +11,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    right: 50%;
     transform: translate(-50%, -50%);
     justify-content: center;
     align-items: center;
@@ -26,13 +27,14 @@
 
 .logincontainer h1 {
     margin-top: 5px; /* Remove qualquer margem */
+    color: #800020;
 }
 
 
 .logincontainer label {
     display: block;
     margin: 10px 0 5px;
-    color: #990033;
+    color: #800020;
     font-weight: bold;
     font-size: 1.3em; /* Aumente o tamanho da fonte dos rótulos */
 }
@@ -60,7 +62,7 @@
 
 .logincontainer input[type="text"]::placeholder, 
 .logincontainer input[type="password"]::placeholder {
-    color: #999;
+    color: #000000;
     font-style: italic;
 }
 
@@ -147,38 +149,49 @@
 @media screen and (min-width: 2560px) {
     /* Estilos específicos para telas com largura mínima de 2560px */
     .logincontainer{
-        height: 600px;
-        width: 550px;
+        height: 700px;
+        width: 600px;
+        align-items: center;
+    }
+    .logincontainer label{
+        height: 40px;
     }
 }
 
 /* L-1440px */
 @media screen and (min-width: 1440px) and (max-width: 2559px){
     .logincontainer{
-        height: 600px;
+        height: 540px;
         width: 550px;
+        align-items: center;
+    }
+    .logincontainer label{
+        height: 20px;
     }
 }
 
 /* laptop-1024px */
 @media screen and (min-width: 1024px) and (max-width: 1439px){
     .logincontainer{
-        height: 700px;
+        height: 540px;
         width: 600px;
         align-items: center;
     }
     .logincontainer label{
-        height: 50px;
+        height: 20px;
     }
 }
 
 /* tablet-768px */
 @media screen and (min-width: 768px) and (max-width: 1023px){
     .logincontainer{
-        height: 600px;
+        height: 530px;
         width: 550px;
         align-items: center;
         justify-content: center;
+    }
+    .logincontainer h1{ 
+        margin-top: -30px;
     }
 }
 

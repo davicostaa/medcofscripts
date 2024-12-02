@@ -3,8 +3,8 @@
 .avisospage {
     font-family: 'Montserrat', sans-serif;
     position: absolute;
-    top: 125px;
-    right: 200px;
+    top: 200px;
+    right: 440px;
     background-color: transparent;
     padding: 20px;
     border-radius: 8px;
@@ -33,6 +33,6 @@
 
 @media screen and (min-width: 2560px) {
     .avisospage{
-        right: 525px;
+        right: 840px;
     }
 }
